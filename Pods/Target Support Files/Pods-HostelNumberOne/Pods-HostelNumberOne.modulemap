@@ -1,0 +1,6 @@
+framework module Pods_HostelNumberOne {
+  umbrella header "Pods-HostelNumberOne-umbrella.h"
+
+  export *
+  module * { export * }
+}
