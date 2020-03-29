@@ -68,6 +68,8 @@ extension RoomsUserTableViewController{
         cell.priceLabel.text = _rooms.price
         cell.imageViewLabel.contentMode = .scaleAspectFill
         cell.accessoryType = .disclosureIndicator
+        cell.imageViewLabel.layer.cornerRadius = 20
+        cell.imageViewLabel.clipsToBounds = true
         if let imageLogo = _rooms.image{
             let url = URL(string: imageLogo)!
             URLSession.shared.dataTask(with: url) { (data, response, error) in

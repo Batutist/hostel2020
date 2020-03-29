@@ -118,6 +118,9 @@ class OrderAllViewController: UIViewController,UITableViewDataSource,UITableView
             cell.titleLabel.text = rooms.title
             cell.priceLabel.text = rooms.price
             cell.statusLabel.text = "rooms.status"
+            cell.imageViewLabel.contentMode = .scaleAspectFill
+            cell.imageViewLabel.layer.cornerRadius = 20
+            cell.imageViewLabel.clipsToBounds = true
             if let imageLogo = rooms.image{
                 let url = URL(string: imageLogo)!
                 URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -137,6 +140,9 @@ class OrderAllViewController: UIViewController,UITableViewDataSource,UITableView
             cell.titleLabel.text = services.title
             cell.priceLabel.text = services.price
             cell.statusLabel.text = "services.status"
+            cell.imageViewLabel.contentMode = .scaleAspectFill
+            cell.imageViewLabel.layer.cornerRadius = 20
+            cell.imageViewLabel.clipsToBounds = true
             if let imageLogo = services.image{
                 let url = URL(string: imageLogo)!
                 URLSession.shared.dataTask(with: url) { (data, response, error) in

@@ -31,7 +31,6 @@
 		ED7E18C9239A9F190032BFC3 /* orderUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E18C8239A9F180032BFC3 /* orderUserTableViewController.swift */; };
 		ED7E18CB239FCCE30032BFC3 /* OrderUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E18CA239FCCE30032BFC3 /* OrderUserTableViewCell.swift */; };
 		EDAE791B236380F800CD81E3 /* ServicessAdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE791A236380F800CD81E3 /* ServicessAdminTableViewController.swift */; };
-		EDB627A6241C1D73004BEADA /* modelForStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB627A5241C1D73004BEADA /* modelForStepper.swift */; };
 		EDBC5FB2235FB06F00ACC7B8 /* RoomsAdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC5FB1235FB06F00ACC7B8 /* RoomsAdminTableViewController.swift */; };
 		EDBC5FB623605F0C00ACC7B8 /* Servicess.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC5FB523605F0C00ACC7B8 /* Servicess.swift */; };
 		EDBC5FB82360648200ACC7B8 /* ServicessAdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC5FB72360648200ACC7B8 /* ServicessAdminTableViewCell.swift */; };
@@ -49,7 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		381ABE5A238D6726007EFCE6 /* ShowAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		381ABE5A238D6726007EFCE6 /* ShowAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowAlert.swift; path = HostelNumberOne/ShowAlert.swift; sourceTree = "<group>"; };
 		381ABE5C238D69BA007EFCE6 /* AddServicessAdminTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddServicessAdminTableViewController.swift; path = HostelNumberOne/Admin/services/AddServicessAdminTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		381ABE5E238D6A1A007EFCE6 /* ServicessUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicessUserTableViewController.swift; sourceTree = "<group>"; };
 		591482C67BCE8234AA84CCF0 /* Pods-HostelNumberOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HostelNumberOne.release.xcconfig"; path = "Target Support Files/Pods-HostelNumberOne/Pods-HostelNumberOne.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 		ED7E18C8239A9F180032BFC3 /* orderUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderUserTableViewController.swift; sourceTree = "<group>"; };
 		ED7E18CA239FCCE30032BFC3 /* OrderUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderUserTableViewCell.swift; sourceTree = "<group>"; };
 		EDAE791A236380F800CD81E3 /* ServicessAdminTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicessAdminTableViewController.swift; sourceTree = "<group>"; };
-		EDB627A5241C1D73004BEADA /* modelForStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelForStepper.swift; sourceTree = "<group>"; };
 		EDBC5FB1235FB06F00ACC7B8 /* RoomsAdminTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsAdminTableViewController.swift; sourceTree = "<group>"; };
 		EDBC5FB523605F0C00ACC7B8 /* Servicess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Servicess.swift; path = HostelNumberOne/Supports/Servicess.swift; sourceTree = "<group>"; };
 		EDBC5FB72360648200ACC7B8 /* ServicessAdminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServicessAdminTableViewCell.swift; path = ../../Supports/ServicessAdminTableViewCell.swift; sourceTree = "<group>"; };
@@ -129,6 +127,7 @@
 				EDDC931C23D9B860000AE4E3 /* Struct */,
 				ED43E6A223679ECA00D80C43 /* File.swift */,
 				EDD47D9323E3426E00A33EE3 /* Encodable.swift */,
+				381ABE5A238D6726007EFCE6 /* ShowAlert.swift */,
 				ED11BA802355DC350081EE31 /* HostelNumberOne */,
 				ED11BA7F2355DC350081EE31 /* Products */,
 				8A67BE0AA4D5C6BD34E64480 /* Pods */,
@@ -277,7 +276,6 @@
 		EDDC931C23D9B860000AE4E3 /* Struct */ = {
 			isa = PBXGroup;
 			children = (
-				EDB627A5241C1D73004BEADA /* modelForStepper.swift */,
 				EDED5EF62359F29B00264388 /* User.swift */,
 				EDED5EF8235A202200264388 /* Rooms.swift */,
 				EDBC5FB523605F0C00ACC7B8 /* Servicess.swift */,
@@ -291,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				ED11BA832355DC350081EE31 /* ViewController.swift */,
-				381ABE5A238D6726007EFCE6 /* ShowAlert.swift */,
 				ED38F7CD238B14B600840C88 /* RegistrationTableViewController.swift */,
 			);
 			name = MainLoginAndRegistration;
@@ -445,7 +442,6 @@
 				ED3DA85F2372D07E0010673F /* BascetUserTableViewController.swift in Sources */,
 				EDF8629323F5B76C002B1D91 /* OrderAllViewController.swift in Sources */,
 				ED5F586923A94C8E0003CE23 /* ProfileUserTableViewCell.swift in Sources */,
-				EDB627A6241C1D73004BEADA /* modelForStepper.swift in Sources */,
 				381ABE5D238D69BA007EFCE6 /* AddServicessAdminTableViewController.swift in Sources */,
 				EDD47D9223E3118400A33EE3 /* AddRoomsTableViewController.swift in Sources */,
 				ED451A912402A47A0029D7C8 /* extensionDemonstretionRooms.swift in Sources */,

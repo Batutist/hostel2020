@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         warnLabel.alpha = 0 // ошибка при загрузке не будет показываться те прозрачный
         button()
     }
+   // MARK: - designButton
     func button(){
         loginButton.layer.cornerRadius = 14  /// радиус закругления закругление
         loginButton.layer.borderWidth = 1.0   // толщина обводки
@@ -51,4 +52,5 @@ class ViewController: UIViewController {
         registetionButton.clipsToBounds = true  // не забудь это, а то не закруглиться
     }
 }
+
 

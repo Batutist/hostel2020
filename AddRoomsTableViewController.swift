@@ -28,7 +28,7 @@ class AddRoomsTableViewController: UITableViewController {
     }
     func setupImageView(){
         let tapGesture = UITapGestureRecognizer()
-        tapGesture.addTarget(self, action: #selector(AddServicessAdminTableViewController.openGallery(tapGesture:)))
+        tapGesture.addTarget(self, action: #selector(AddRoomsTableViewController.openGallery(tapGesture:)))
         imageLabel.isUserInteractionEnabled = true
         imageLabel.addGestureRecognizer(tapGesture)
     }

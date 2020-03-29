@@ -58,6 +58,8 @@ extension ServicessUserTableViewController{
         cell.priceTextLabel.text =  _services.price
         cell.accessoryType = .disclosureIndicator
         cell.imageLabel.contentMode = .scaleAspectFill
+        cell.imageLabel.layer.cornerRadius = 20
+        cell.imageLabel.clipsToBounds = true
         if let imageLogo = _services.image{
             let url = URL(string: imageLogo)!
             URLSession.shared.dataTask(with: url) { (data, response, error) in

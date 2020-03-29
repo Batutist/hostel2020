@@ -5,7 +5,7 @@ class BuyStat {
     
     var purchaseAmount = 0
     
-    init(purchaseAmount : Double) {
+    init(purchaseAmount : Int) {
         self.purchaseAmount = Int(purchaseAmount)
     }
 }

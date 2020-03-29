@@ -6,26 +6,16 @@ class BascetUserTableViewController: UITableViewController {
     var rooms = [Rooms]()
     var serv = [Servicess]()
     var profile = [userAndAdmin]()
-    var stats = [BuyStat]()
-    var arrrrr = [Int]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: CGRect.zero) // мметод что бы не прорисовывались лишнии ячейки
         tableView.reloadData()
-        statsFunccount()
         setupFirebase()
     }
-    func statsFunccount(){
-        var i = arrrrr.count
-        while i > 0 {
-            var arrstat = [BuyStat]()
-            arrstat = [BuyStat(purchaseAmount: 0)]
-            stats.append(contentsOf: arrstat)
-            i-=1
-            tableView.reloadData()
-        }
-    }
+    
+   
     func setupFirebase(){
         guard let currentUser = Auth.auth().currentUser else {return}
         user = Users(user: currentUser )
@@ -93,6 +83,7 @@ class BascetUserTableViewController: UITableViewController {
         
         let ref = Database.database().reference().child("Buscet").child(datatime()).child("Rooms")
         let reff = Database.database().reference().child("Buscet").child(datatime()).child("Services")
+        
         let refProfile = Database.database().reference().child("Buscet").child(datatime()).child("Profile")
         
         for i in rooms {
@@ -109,7 +100,6 @@ class BascetUserTableViewController: UITableViewController {
             if let title = i.title{
                 i.userId = user.email
                 i.dataTimeOrder = datatime()
-                i.countServices = ""
                 let servRef = reff.child(title.lowercased())
                 let historyServ = refHostoryOrderServ.child(title.lowercased())
                 historyServ.setValue(i.convertToDictionary())
@@ -135,9 +125,7 @@ extension BascetUserTableViewController {
         if section == 0 {
             return rooms.count
         }else{
-            arrrrr.append(serv.count)
             return serv.count
-          
         }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -147,6 +135,8 @@ extension BascetUserTableViewController {
             cell.titleLabel.text = _rooms.title
             cell.priceLabel.text = _rooms.price
             cell.imageLogo.contentMode = .scaleAspectFill
+            cell.imageLogo.layer.cornerRadius = 20
+            cell.imageLogo.clipsToBounds = true
             if let imageLogo = _rooms.image{
                 let url = URL(string: imageLogo)!
                 URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -167,9 +157,9 @@ extension BascetUserTableViewController {
             cell.titleLabel.text = _serv.title
             cell.priceLabel.text = _serv.price
             cell.imageLogo.contentMode = .scaleAspectFill
+            cell.imageLogo.layer.cornerRadius = 20
+            cell.imageLogo.clipsToBounds = true
             
-             cell.buyStat = stats[indexPath.row]
-        
             if let imageLogo = _serv.image{
                 let url = URL(string: imageLogo)!
                 URLSession.shared.dataTask(with: url) { (data, response, error) in
