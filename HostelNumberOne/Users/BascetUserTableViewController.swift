@@ -2,6 +2,7 @@ import UIKit
 import Firebase
 
 class BascetUserTableViewController: UITableViewController {
+   
     var user: Users!
     var rooms = [Rooms]()
     var serv = [Servicess]()
@@ -154,6 +155,11 @@ extension BascetUserTableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellServ", for: indexPath) as! BascetTableViewCell
             let _serv = serv[indexPath.row]
             
+            
+//            if let customView = Bundle.main.loadNibNamed("QuantityView", owner: self, options: nil)?.first as? QuantityView {
+//                return customView
+//            }
+             
             cell.titleLabel.text = _serv.title
             cell.priceLabel.text = _serv.price
             cell.imageLogo.contentMode = .scaleAspectFill

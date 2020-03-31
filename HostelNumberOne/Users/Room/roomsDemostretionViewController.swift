@@ -44,10 +44,12 @@ class roomsDemostretionViewController: UIViewController {
         arrayOrderArrival.removeAll()
         arrayOrderDeparture.removeAll()
         
-        if _rooms.count == 0 { //если массив пустой то его нет в ветки брони
+        if (String(textFieldDateDeparture.text!)<=String(textFieldDateArrival.text!)){//если дата выезда меньше даты заезда 
+            self.showAlert(title: "Введенные данные некорректны", message: "")
+        }else if _rooms.count == 0 { //если массив пустой то его нет в ветки брони
             buscet()
             self.showAlert(title: "Номер добавлен", message: "")
-           // alertcontroller()
+        
         } else { // если в нем лежит что-то идет проверка на даты
             for i in _rooms{
                 if i.dateArrival == nil || i.dateDeparture == nil{
@@ -56,18 +58,16 @@ class roomsDemostretionViewController: UIViewController {
                     arrayOrderArrival.append(i.dateArrival!)
                     arrayOrderDeparture.append(i.dateDeparture!)
                     if ((i.dateArrival!<=String(textFieldDateArrival.text!) && i.dateDeparture! >= String(textFieldDateArrival.text!)) || (i.dateArrival! <= String(textFieldDateDeparture.text!) && i.dateDeparture! >= String(textFieldDateDeparture.text!) )) || ((String(textFieldDateArrival.text!) <= i.dateArrival!) && (String(textFieldDateDeparture.text!) >= i.dateDeparture!)){
-                        //alertcontrollerOrder()
                         self.showAlert(title: "Номер занят" , message: "Номер в эти даты занят c \(arrayOrderArrival) по \(arrayOrderDeparture))")
                         break
-                    }else {
+                    }else{
                         buscet()
                         self.showAlert(title: "Номер добавлен", message: "")
-                        //alertcontroller()
                     }
                 }
             }
         }
-    }
+}
     func buscet(){
         let ref = Database.database().reference().child("users").child(user.uid!).child("Buscet").child("Rooms")
         if let title = rooms.title {
